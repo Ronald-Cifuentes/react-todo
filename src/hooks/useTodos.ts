@@ -1,6 +1,7 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { CreateTodoInput, SortOption, TodoStatus, UpdateTodoInput } from '../types';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+
 import { todoApi } from '../lib/api';
-import { Todo, CreateTodoInput, UpdateTodoInput, TodoStatus, SortOption } from '../types';
 
 export const useTodos = (status: TodoStatus = 'all', sort: SortOption = 'created_at_desc', search?: string) => {
   return useQuery({
